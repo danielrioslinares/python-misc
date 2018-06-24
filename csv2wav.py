@@ -2,7 +2,7 @@
 
 """
 csv2wav
-	@version : 0.1.0
+	@version : 0.1.1
 	@author : Daniel Ríos Linares (c) 2018, hasbornasu@gmail.com
 	@description : a very simple script to convert .csv files to .wav (from an
         oscilloscope for example)
@@ -23,38 +23,51 @@ csv2wav
 import csv
 import wave
 import struct
+import statistics
 from datetime import datetime
 
 # Target
-filename = 'test.csv' # .csv file
-f = 4000 # resampling frequency, minimum is 8*FS (in Hz)
-gain = 2048*4 # gain from normalization to 1
+filenames = [] # .csv file
+properties = ['' for f in filenames] # added information
+f = 500 # sampling frequency
 
-# Data read and amplitude normalization
-print('Normalizing data...')
-data = [float(value) for time, value in csv.reader(open(filename, 'U'), delimiter=',')]
-data = [d/abs(max(data)) for d in data]
+for filename, property in zip(filenames, properties):
+	print('###### FILE ' + str(filename) + ' ######')
+	# Data read and amplitude normalization
+	print('-> Normalizing data...')
+	data = [value for time, value in csv.reader(open(filename, 'U'), delimiter=',')]
+	# Remove useless data (may add glitches)
+	for i in reversed(range(len(data))):
+		try: a = float(data[i])
+		except: del(data[i])
+	# Convert to float the remaining
+	data = [float(d) for d in data]
+	# Nomalize data (per 1 and perfect High pass at 0 Hz)
+	data = [(d-sum(data)/len(data))/abs(max(data)) for d in data]
+	# Saturation rate (typical deviation)
+	saturation = 3*statistics.pstdev(data)
+	data = [d/saturation if abs(d) < saturation else d/abs(d) for d in data]
 
-# Create a new .wav named with the format "<name>_<date>"
-print('Opening the file...')
-wavfilename = filename + '_' + str(datetime.now().strftime('%Y%m%d_%H%M%S')) + '.wav'
-wavfile = wave.open(wavfilename, 'w')
+	# Create a new .wav named with the format "<name>_<date>"
+	print('-> Opening the file...')
+	wavfilename = filename + '_' + str(datetime.now().strftime('%Y%m%d_%H%M%S')) + property + '.wav'
+	wavfile = wave.open(wavfilename, 'w')
 
-# Audio file parameters
-wavfile.setparams(
-    (1, # mono
-    2, # bytes
-    f, # Sampling frequency
-    len(data), # number of samples
-    'NONE', # compression type (only 'NONE available')
-    'not compressed' # compression method (only 'not compressed' available)
-    ))
+	# Audio file parameters
+	wavfile.setparams(
+	    (1, # mono
+	    2, # bytes
+	    f, # Sampling frequency
+	    len(data), # number of samples
+	    'NONE', # compression type (only 'NONE available')
+	    'not compressed' # compression method (only 'not compressed' available)
+	    ))
 
-# Because Wave_file.writeframes(data) requires a "bytes-like" object
-print('Converting to bytes...')
-data_bytes = b''.join([struct.pack('<h', int(d*gain)) for d in data])
+	# Because Wave_file.writeframes(data) requires a "bytes-like" object
+	print('-> Converting to bytes...')
+	data_bytes = b''.join([struct.pack('<h', int(d*1024*24)) for d in data])
 
-# Write the frames into the Wave_write file
-print('Writing the .wav')
-wavfile.writeframes(data_bytes)
-wavfile.close()
+	# Write the frames into the Wave_write file
+	print('-> Writing the .wav')
+	wavfile.writeframes(data_bytes)
+	wavfile.close()
