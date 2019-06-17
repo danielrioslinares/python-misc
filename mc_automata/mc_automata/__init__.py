@@ -826,7 +826,7 @@ class MinecraftAFKSubstitute(object):
 	VERSIONS = {
 		"1.14" : {
 			# General
-			"Window Title" : "Minecraft 1.14.1",
+			"Window Title" : "Minecraft 1.14.2",
 			"Character settings" : {
 				"Odometry sneak speed" : 1.310, # m/s
 				"Odometry walk speed" : 4.317, # m/s
@@ -2101,6 +2101,7 @@ class MinecraftAFKSubstitute(object):
 		while True:
 			i += 1
 			yaw,pit = self.get_YP()[1]
+			yaw_f = (yaw_f + 180) % 360 -180
 			Δyaw = (yaw - yaw_f + 180) % 360 -180
 			self._ol_rotate_camera(-max([Δyaw, ((Δyaw>0)-(Δyaw<0))* 0.15], key=abs),0)
 			yaw,pit = self.get_YP()[1]
@@ -2111,6 +2112,7 @@ class MinecraftAFKSubstitute(object):
 		while True:
 			i += 1
 			yaw,pit = self.get_YP()[1]
+			pit_f = (pit_f + 180) % 360 -180
 			Δpit = (pit - pit_f + 180) % 360 -180
 			self._ol_rotate_camera(0,-max([Δpit, ((Δpit>0)-(Δpit<0))* 0.15], key=abs))
 			yaw,pit = self.get_YP()[1]
@@ -2128,7 +2130,7 @@ class MinecraftAFKSubstitute(object):
 	#		This method only inspect x and z, use self.go_forward_xyz if you
 	#		move upstairs or downstairs
 	#
-	def go_forward_xz(self, df, df_tol=0.05):
+	def go_forward_xz(self, df, df_tol=0.10):
 
 		# Get tuple xyz_i = (x_i, y_i, z_i)
 		x_i,y_i,z_i = self.get_XYZ()[1]
@@ -2170,7 +2172,7 @@ class MinecraftAFKSubstitute(object):
 	#		yaw,pitch angles. Only inspects x,z, use self.go_forward_xyz if you
 	#		move upstairs/downstairs
 	#
-	def go_straight_xz(self, xyz, d_tol=0.05):
+	def go_straight_xz(self, xyz, d_tol=0.10):
 
 		df = float('inf')
 		while df > d_tol:
