@@ -1,0 +1,432 @@
+
+from GuitarFancyChords import *
+from Tableture_measures import *
+
+
+
+song = GuitarMeasure( "06 - Artic Monkeys - Who The Fuck Are The Artic Monkeys" )
+song.set_title("Artic Monkeys (composed by Alex Turner)", "Who The Fuck Are The Artic Monkeys?")
+
+## Alex Turner - Guitar ##
+
+song.header_next( "[Intro] (0:00)" )
+for i in range(6):
+	song.footer_next( "Lick " + str(i+1) )
+	song.notes_next( *turner_guita_lick_part01 )
+	song.notes_next( *turner_guita_lick_part02 )
+
+song.header_next( "[Verse] (0:21)" )
+song.notes_next( *[] )
+song.notes_next( *turner_guita_verse01_part01 )
+song.notes_next( *turner_guita_verse01_part02 )
+song.notes_next( *turner_guita_verse01_part03 )
+song.notes_next( *turner_guita_verse01_part04 )
+song.notes_next( *turner_guita_verse01_part05 )
+song.notes_next( *turner_guita_verse01_part06 )
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( *turner_guita_verse01_part01 )
+song.notes_next( *turner_guita_verse01_part02 )
+song.notes_next( *turner_guita_verse01_part03 )
+song.notes_next( *turner_guita_verse01_part04 )
+song.notes_next( *turner_guita_verse01_part05 )
+song.notes_next( *turner_guita_verse01_part06 )
+song.notes_next( *[] )
+
+song.header_next( "[Refrain] (0:50)" )
+song.notes_next( *turner_guita_refrain_part01 )
+song.notes_next( *turner_guita_refrain_part02 )
+song.notes_next( *turner_guita_refrain_part03 )
+song.notes_next( *turner_guita_refrain_part04 )
+song.notes_next( *turner_guita_refrain_part05 )
+song.notes_next( *turner_guita_refrain_part06 )
+song.notes_next( *turner_guita_refrain_part07 )
+song.notes_next( *turner_guita_refrain_part08 )
+song.notes_next( *turner_guita_refrain_part09 )
+song.notes_next( *turner_guita_refrain_part10 )
+song.notes_next( *turner_guita_refrain_part11 )
+
+song.header_next( "[Instrumental] (1:10)" )
+for i in range(4):
+	song.footer_next( "Lick " + str(i+1) )
+	song.notes_next( *turner_guita_lick_part01 )
+	song.notes_next( *turner_guita_lick_part02 )
+
+song.header_next( "[Verse] (1:25)" )
+song.notes_next( *[] )
+song.notes_next( *turner_guita_verse01_part01 )
+song.notes_next( *turner_guita_verse01_part02 )
+song.notes_next( *turner_guita_verse01_part03 )
+song.notes_next( *turner_guita_verse01_part04 )
+song.notes_next( *turner_guita_verse01_part05 )
+song.notes_next( *turner_guita_verse01_part06 )
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( *turner_guita_verse01_part01 )
+song.notes_next( *turner_guita_verse01_part02 )
+song.notes_next( *turner_guita_verse01_part03 )
+song.notes_next( *turner_guita_verse01_part04 )
+song.notes_next( *turner_guita_verse01_part05 )
+song.notes_next( *turner_guita_verse01_part06 )
+song.notes_next( *[] )
+
+song.header_next( "[Refrain] (1:54)" )
+song.notes_next( *turner_guita_refrain_part01 )
+song.notes_next( *turner_guita_refrain_part02 )
+song.notes_next( *turner_guita_refrain_part03 )
+song.notes_next( *turner_guita_refrain_part04 )
+song.notes_next( *turner_guita_refrain_part05 )
+song.notes_next( *turner_guita_refrain_part06 )
+song.notes_next( *turner_guita_refrain_part07 )
+song.notes_next( *turner_guita_refrain_part08 )
+song.notes_next( *turner_guita_refrain_part09 )
+song.notes_next( *turner_guita_refrain_part10 )
+song.notes_next( *turner_guita_refrain_part11 )
+
+song.header_next( "[Jamie Cook Solo] (2:14)" )
+for i in range(16):
+	song.notes_next( *[] )
+
+song.header_next( "[Lalala] (2:42)" )
+song.notes_next( *turner_guita_lalala_lick_part01 )
+song.notes_next( *turner_guita_lalala_lick_part02 )
+song.notes_next( *turner_guita_lalala_lick_part03 )
+song.notes_next( *turner_guita_lalala_lick_part04 )
+song.notes_next( *turner_guita_lalala_lick_part05 )
+song.notes_next( *turner_guita_lalala_lick_part06 )
+song.notes_next( *turner_guita_lalala_lick_part07 )
+song.notes_next( *turner_guita_lalala_lick_part08 )
+
+song.header_next( "[Verse 3] (2:57)" )
+song.notes_next( *turner_guita_verse03_part01 )
+song.notes_next( *turner_guita_verse03_part02 )
+song.notes_next( *turner_guita_verse03_part03 )
+song.notes_next( *turner_guita_verse03_part04 )
+song.notes_next( *turner_guita_verse03_part05 )
+song.notes_next( *turner_guita_verse03_part06 )
+song.notes_next( *turner_guita_verse03_part07 )
+song.notes_next( *[] )
+
+song.header_next( "[Bass spam] (3:11)" )
+for i in range(8): song.notes_next( *[] )
+
+song.header_next( "[Tongue Verse] (3:25)" )
+
+song.notes_next( *turner_guita_itsnotyou1_part01 )
+song.notes_next( *turner_guita_itsnotyou1_part02 )
+song.notes_next( *turner_guita_itsnotyou1_part03 )
+song.notes_next( *turner_guita_itsnotyou1_part04 )
+song.notes_next( *turner_guita_itsnotyou2_part01 )
+song.notes_next( *turner_guita_itsnotyou2_part02 )
+song.notes_next( *turner_guita_itsnotyou2_part03 )
+song.notes_next( *turner_guita_itsnotyou2_part04 )
+song.notes_next( *turner_guita_itsnotyou1_part01 )
+song.notes_next( *turner_guita_itsnotyou1_part02 )
+song.notes_next( *turner_guita_itsnotyou1_part03 )
+song.notes_next( *turner_guita_itsnotyou1_part04 )
+song.notes_next( *turner_guita_itsnotyou2_part01 )
+song.notes_next( *turner_guita_itsnotyou2_part02 )
+song.notes_next( *turner_guita_itsnotyou2_part03 )
+song.notes_next( *turner_guita_itsnotyou2_part04 )
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( *[] )
+
+song.header_next( "[Turin turú] (3:53)" )
+for i in range(8):
+	song.notes_next( *turner_guita_turinturu01 )
+	song.notes_next( *turner_guita_turinturu02 )
+
+song.header_next( "[Tongue Verse + Turin turú] (4:21)" )
+for i in range(4):
+	song.notes_next( *turner_guita_turinturu01 )
+	song.notes_next( *turner_guita_turinturu02 )
+
+song.header_next( "[Outro] (4:36)" )
+for i in range(4):
+	song.notes_next( *turner_guita_outro_part01 )
+	song.notes_next( *turner_guita_outro_part02 )
+
+
+
+
+
+song.verse_next()
+
+
+## Alex Turner - Vocal ##
+
+song.header_next( "[Intro]" )
+for i in range(12):
+	song.notes_next( *[] )
+song.header_next( "[Verse]" )
+song.notes_next( *turner_vocal_verse01_part01 )
+song.notes_next( *turner_vocal_verse01_part02 )
+song.notes_next( *turner_vocal_verse01_part03 )
+song.notes_next( *turner_vocal_verse01_part04 )
+song.notes_next( *turner_vocal_verse01_part05 )
+song.footer_next( "when you've been where we" )
+song.notes_next( *turner_vocal_verse01_part06 )
+song.footer_next( "'ve beeeeeen" )
+song.notes_next( *turner_vocal_verse01_part07 )
+song.notes_next( *[] )
+song.footer_next( "Have I done something to tri-" )
+song.notes_next( *turner_vocal_verse02_part01 )
+song.footer_next( "ggeeeeer..." )
+song.notes_next( *turner_vocal_verse02_part02 )
+song.footer_next( "the funny looks and the sni-" )
+song.notes_next( *turner_vocal_verse02_part03 )
+song.footer_next( "ggers? Are they there" )
+song.notes_next( *turner_vocal_verse02_part04 )
+song.footer_next( "aat aaaall?" )
+song.notes_next( *turner_vocal_verse02_part05 )
+song.footer_next( "Or is it just para-" )
+song.notes_next( *turner_vocal_verse02_part06 )
+song.footer_next( "aa noiaaaaa?" )
+song.notes_next( *turner_vocal_verse02_part07 )
+song.notes_next( *[] )
+song.header_next( "[Refrain]" )
+song.footer_next( "Everybody..." )
+song.notes_next( *turner_vocal_refrain_part01 )
+song.notes_next( *turner_vocal_refrain_part02 )
+song.notes_next( *turner_vocal_refrain_part03 )
+song.notes_next( *turner_vocal_refrain_part04 )
+song.notes_next( *turner_vocal_refrain_part05 )
+song.notes_next( *turner_vocal_refrain_part06 )
+song.notes_next( *turner_vocal_refrain_part07 )
+song.notes_next( *turner_vocal_refrain_part08 )
+song.notes_next( *turner_vocal_refrain_part09 )
+song.notes_next( *turner_vocal_refrain_part10 )
+song.notes_next( *turner_vocal_refrain_part11 )
+song.header_next( "[Instrumental]" )
+for i in range(8):
+	song.notes_next( *[] )
+
+song.header_next( "[Verse]" )
+song.notes_next( *turner_vocal_verse01_part01 )
+song.notes_next( *turner_vocal_verse01_part02 )
+song.notes_next( *turner_vocal_verse01_part03 )
+song.notes_next( *turner_vocal_verse01_part04 )
+song.notes_next( *turner_vocal_verse01_part05 )
+song.notes_next( *turner_vocal_verse01_part06 )
+song.notes_next( *turner_vocal_verse01_part07 )
+song.notes_next( *[] )
+song.notes_next( *turner_vocal_verse02_part01 )
+song.notes_next( *turner_vocal_verse02_part02 )
+song.notes_next( *turner_vocal_verse02_part03 )
+song.notes_next( *turner_vocal_verse02_part04 )
+song.notes_next( *turner_vocal_verse02_part05 )
+song.notes_next( *turner_vocal_verse02_part06 )
+song.notes_next( *turner_vocal_verse02_part07 )
+song.notes_next( *[] )
+
+song.header_next( "[Refrain]" )
+song.notes_next( *turner_vocal_refrain_part01 )
+song.notes_next( *turner_vocal_refrain_part02 )
+song.notes_next( *turner_vocal_refrain_part03 )
+song.notes_next( *turner_vocal_refrain_part04 )
+song.notes_next( *turner_vocal_refrain_part05 )
+song.notes_next( *turner_vocal_refrain_part06 )
+song.notes_next( *turner_vocal_refrain_part07 )
+song.notes_next( *turner_vocal_refrain_part08 )
+song.notes_next( *turner_vocal_refrain_part09 )
+song.notes_next( *turner_vocal_refrain_part10 )
+song.notes_next( *turner_vocal_refrain_part11 )
+
+song.header_next( "[Jamie Cook Solo]" )
+for i in range(16):
+	song.notes_next( *[] )
+
+song.header_next( "[Lalala] (2:42)" )
+for i in range(3):
+	song.notes_next( *turner_vocal_lalala_part01 )
+	song.notes_next( *turner_vocal_lalala_part02 )
+song.notes_next( *[] )
+song.notes_next( *[] )
+
+song.header_next( "[Verse 3] (2:57)" )
+song.notes_next( *turner_vocal_verse03_part01 )
+song.notes_next( *turner_vocal_verse03_part02 )
+song.notes_next( *turner_vocal_verse03_part03 )
+song.notes_next( *turner_vocal_verse03_part04 )
+song.notes_next( *turner_vocal_verse03_part05 )
+song.notes_next( *turner_vocal_verse03_part06 )
+song.notes_next( *turner_vocal_verse03_part07 )
+song.notes_next( *[] )
+
+song.header_next( "[Bass spam] (3:11)" )
+for i in range(8): song.notes_next( *[] )
+
+song.header_next( "[Tongue verse] (3:25)" )
+song.notes_next( *turner_vocal_itsnotyou_part01 )
+song.notes_next( *turner_vocal_itsnotyou_part02 )
+song.notes_next( *turner_vocal_itsnotyou_part03 )
+song.notes_next( *turner_vocal_itsnotyou_part04 )
+song.notes_next( *turner_vocal_itsnotyou_part05 )
+song.notes_next( *turner_vocal_itsnotyou_part06 )
+song.notes_next( *turner_vocal_itsnotyou_part07 )
+song.notes_next( *[] )
+song.notes_next( *turner_vocal_itsnotyou_part01 )
+song.notes_next( *turner_vocal_itsnotyou_part02 )
+song.notes_next( *turner_vocal_itsnotyou_part03 )
+song.notes_next( *turner_vocal_itsnotyou_part04 )
+song.notes_next( *turner_vocal_itsnotyou_part05 )
+song.notes_next( *turner_vocal_itsnotyou_part06 )
+song.notes_next( *turner_vocal_itsnotyou_part07 )
+song.notes_next( *turner_vocal_itsnotyou_part05 )
+song.notes_next( *turner_vocal_itsnotyou_part06 )
+song.notes_next( *(turner_vocal_itsnotyou_part07 + turner_vocal_bringonthebacklash_part01) )
+song.notes_next( *turner_vocal_bringonthebacklash_part02 )
+
+song.header_next( "[Turin turú] (3:53)" )
+for i in range(8):
+	song.notes_next( *[] )
+	song.notes_next( *[] )
+
+song.header_next( "[Tongue Verse + Turin turú] (4:21)" )
+song.notes_next( *turner_vocal_itsnotyou_part01 )
+song.notes_next( *turner_vocal_itsnotyou_part02 )
+song.notes_next( *turner_vocal_itsnotyou_part03 )
+song.notes_next( *turner_vocal_itsnotyou_part04 )
+song.notes_next( *turner_vocal_itsnotyou_part05 )
+song.notes_next( *turner_vocal_itsnotyou_part06 )
+song.notes_next( *turner_vocal_itsnotyou_part07 )
+song.notes_next( *[] )
+
+song.header_next( "[Outro] (4:36)" )
+song.notes_next( *turner_vocal_itsnotyou_part01 )
+song.notes_next( *turner_vocal_itsnotyou_part02 )
+song.notes_next( *turner_vocal_itsnotyou_part03 )
+song.notes_next( *turner_vocal_itsnotyou_part04 )
+song.notes_next( *turner_vocal_itsnotyou_part05 )
+song.notes_next( *turner_vocal_itsnotyou_part06 )
+song.notes_next( *turner_vocal_itsnotyou_part07 )
+song.notes_next( *[] )
+
+
+
+song.verse_next()
+
+## Jamie Cook (Chords) ##
+
+song.header_next( "[Intro]" )
+
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( *jamiec_guita_FSMinor_part02 )
+for i in range(4):
+	song.footer_next( "Bm " + str(i+1) )
+	song.notes_next( *jamiec_guita_BMinor )
+	song.footer_next( "F#m " + str(i+1) )
+	song.notes_next( *jamiec_guita_FSMinor )
+
+song.header_next( "[Verse]" )
+for i in range(8):
+	song.footer_next( "Bm " + str(i+1) )
+	song.notes_next( *jamiec_guita_BMinor )
+	song.footer_next( "F#m " + str(i+1) )
+	song.notes_next( *jamiec_guita_FSMinor )
+
+song.header_next( "[Refrain]" )
+song.notes_next( *jamiec_guita_refrain_part01 )
+song.notes_next( *jamiec_guita_refrain_part02 )
+song.notes_next( *jamiec_guita_refrain_part03 )
+song.notes_next( *jamiec_guita_refrain_part04 )
+song.notes_next( *jamiec_guita_refrain_part05 )
+song.notes_next( *jamiec_guita_refrain_part06 )
+song.notes_next( *jamiec_guita_refrain_part07 )
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( *jamiec_guita_FSMinor_part02 )
+
+song.header_next( "[Instrumental]" )
+for i in range(4):
+	song.footer_next( "Bm " + str(i+1) )
+	song.notes_next( *jamiec_guita_BMinor )
+	song.footer_next( "F#m " + str(i+1) )
+	song.notes_next( *jamiec_guita_FSMinor )
+
+song.header_next( "[Verse]" )
+for i in range(8):
+	song.footer_next( "Bm " + str(i+1) )
+	song.notes_next( *jamiec_guita_BMinor )
+	song.footer_next( "F#m " + str(i+1) )
+	song.notes_next( *jamiec_guita_FSMinor )
+
+song.header_next( "[Refrain]" )
+song.notes_next( *jamiec_guita_refrain_part01 )
+song.notes_next( *jamiec_guita_refrain_part02 )
+song.notes_next( *jamiec_guita_refrain_part03 )
+song.notes_next( *jamiec_guita_refrain_part04 )
+song.notes_next( *jamiec_guita_refrain_part05 )
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( Note(5, "0" , 0, ( w - q ) / 4, ( q ) / 4 ), )
+
+song.header_next( "[Jamie Cook Solo]" )
+song.notes_next( *jamiec_guita_jamiec_solo_part01 )
+song.notes_next( *jamiec_guita_jamiec_solo_part02 )
+song.notes_next( *jamiec_guita_jamiec_solo_part03 )
+song.notes_next( *jamiec_guita_jamiec_solo_part04 )
+song.notes_next( *jamiec_guita_jamiec_solo_part05 )
+song.notes_next( *jamiec_guita_jamiec_solo_part06 )
+song.notes_next( *jamiec_guita_jamiec_solo_part07 )
+song.notes_next( *jamiec_guita_jamiec_solo_part08 )
+song.notes_next( *jamiec_guita_jamiec_solo_part09 )
+song.notes_next( *jamiec_guita_jamiec_solo_part10 )
+song.notes_next( *jamiec_guita_jamiec_solo_part11 )
+song.notes_next( *jamiec_guita_jamiec_solo_part12 )
+song.notes_next( *jamiec_guita_jamiec_solo_part13 )
+song.notes_next( *jamiec_guita_jamiec_solo_part14 )
+song.notes_next( *jamiec_guita_jamiec_solo_part15 )
+song.notes_next( *jamiec_guita_jamiec_solo_part16 )
+
+song.header_next( "[Lalala]" )
+for i in range(4):
+	song.footer_next( "Bm " + str(i+1) )
+	song.notes_next( *jamiec_guita_BMinor )
+	song.footer_next( "F#m " + str(i+1) )
+	song.notes_next( *jamiec_guita_FSMinor )
+
+song.header_next( "[Verse 3]" )
+
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( *[] )
+song.notes_next( *jamiec_guita_C2 )
+song.notes_next( *jamiec_guita_C3 )
+song.notes_next( *jamiec_guita_C2 )
+song.notes_next( *jamiec_guita_verse03_ending_part01 )
+song.notes_next( *jamiec_guita_verse03_ending_part02 )
+
+song.header_next( "[Bass spam] (3:11)" )
+for i in range(8): song.notes_next( *[] )
+
+song.header_next( "[Tongue verse] (3:25)" )
+for i in range(19): song.notes_next( *[] )
+
+song.header_next( "[Turin turú] (3:53)" )
+for i in range(4):
+	song.notes_next( *[] )
+	song.notes_next( *[] )
+for i in range(4):
+	song.notes_next( *turner_guita_turinturu01 )
+	song.notes_next( *turner_guita_turinturu02 )
+
+song.header_next( "[Tongue verse + Turin turú] (4:21)" )
+for i in range(4):
+	song.notes_next( *turner_guita_turinturu01 )
+	song.notes_next( *turner_guita_turinturu02 )
+
+song.header_next( "[Outro] (4:36)" )
+for i in range(4):
+	song.notes_next( *turner_guita_turinturu01 )
+	song.notes_next( *turner_guita_turinturu02 )
+
+
+song.save()
